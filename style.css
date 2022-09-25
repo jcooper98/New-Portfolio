@@ -13,8 +13,9 @@ nav{
     justify-content: space-around;
     align-items: center;
     min-height: 8vh;
-    background-color: transparent;
+    background-color: rgba(128, 128, 128, .5);
     font-family: 'Oxygen Mono', monospace;
+    z-index: 1;
 }
 .logo{
     color: rgb(39, 39, 39);
@@ -106,96 +107,95 @@ nav{
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+    z-index: 1;
 }
 .responsive{
     max-width: 100%;
     height: auto;
 }
-
-
 .wrapper {
-    position: absolute;
-    width: 300px;
-    height: 300px;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%) translateY(20px) scale(1.5);
-    overflow: hidden;
+  position: absolute;
+  width: 300px;
+  height: 300px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) translateY(20px) scale(1.5);
+  overflow: hidden;
+}
+@media screen and (max-width: 600px) {
+  .wrapper {
+    transform: translate(-50%, -50%) scale(1);
   }
-  @media screen and (max-width: 600px) {
-    .wrapper {
-      transform: translate(-50%, -50%) scale(1);
-    }
-  }
-  .container {
-    position: absolute;
-    width: 300px;
-    height: 300px;
-  }
-  [data-typing] {
-    position: absolute;
-    top: 0;
-    transform-origin: 0% 0%;
-    font-size: 25px;
-    margin: 0;
-    padding: 0;
-    top: 100px;
-    line-height: 1;
-    color: #333;
-  }
-  [data-typing="i"] {
-    top: 0;
-    left: 50px;
-    font-size: 90px;
-    height: 70px;
-    line-height: 70px;
-  }
-  [data-typing="aspriring"] {
-    top: 3px;
-    left: 80px;
-    font-size: 27px;
-    letter-spacing: 1px;
-  }
-  [data-typing="fullstack"] {
-    top: 30px;
-    left: 80px;     
-    font-size: 40px;
-    letter-spacing: 1px;
-  }
-  [data-typing="engineer"] {
-    top: 74px;
-    left: 265px;
-    font-size: 36px;
-    transform: rotate(90deg);
-    background: #333;
-    color: #fff;
-    padding: 0px 4px;
-  }
-  [data-typing="in"] {
-    top: 74px;
-    left: 229px;
-    transform: rotate(90deg);
-    font-size: 35px;
-  }
-  [data-typing="sacramento"] {
-    top: 72px;
-    right: 110px;
-    font-size: 25px;
-  }
-  
-  [data-typing="animation"] {
-    top: 167px;
-    right: 110px;
-    font-size: 35px;
-  }
-  
-  a {
-    color: #333;
-    text-decoration: none;
-  }
-  
-  body .scenejs-editor-timeline {
-    position: fixed;
-    bottom: 0;
-    max-height: 300px;
-  }
+}
+.container {
+  position: absolute;
+  width: 300px;
+  height: 300px;
+}
+[data-typing] {
+  position: absolute;
+  top: 0;
+  transform-origin: 0% 0%;
+  font-size: 25px;
+  margin: 0;
+  padding: 0;
+  top: 100px;
+  line-height: 1;
+  color: #333;
+}
+[data-typing="i"] {
+  top: 0;
+  left: 50px;
+  font-size: 90px;
+  height: 70px;
+  line-height: 70px;
+}
+[data-typing="aspiring"] {
+  top: 3px;
+  left: 80px;
+  font-size: 27px;
+  letter-spacing: 1px;
+}
+[data-typing="fullstack"] {
+  top: 30px;
+  left: 80px;     
+  font-size: 40px;
+  letter-spacing: 1px;
+}
+[data-typing="engineer"] {
+  top: 74px;
+  left: 265px;
+  font-size: 36px;
+  transform: rotate(90deg);
+  background: #333;
+  color: #fff;
+  padding: 0px 4px;
+}
+[data-typing="in"] {
+  top: 74px;
+  left: 229px;
+  transform: rotate(90deg);
+  font-size: 35px;
+}
+[data-typing="sacramento"] {
+  top: 72px;
+  right: 110px;
+  font-size: 25px;
+}
+
+[data-typing="animation"] {
+  top: 167px;
+  right: 110px;
+  font-size: 35px;
+}
+
+a {
+  color: #333;
+  text-decoration: none;
+}
+
+body .scenejs-editor-timeline {
+  position: fixed;
+  bottom: 0;
+  max-height: 300px;
+}

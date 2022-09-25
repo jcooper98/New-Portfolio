@@ -22,7 +22,7 @@ const navSlide = () =>{
 }
 navSlide();
 
-const scene = new Scene({
+const scene = new scene({
     ".container": {}
   }, {
     selector: true,
